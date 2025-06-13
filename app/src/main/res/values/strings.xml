@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EventApp</string>
+    <string name="signup">Signup</string>
+    <string name="resend_it_in_00_00">Resend it in 00:00</string>
+    <string name="login">Login</string>
+
+    <!-- No HTML tags needed -->
+    <string name="title_slide1">Feel the Beat, Live the Night</string>
+    <string name="title_slide2">Seamless Planning, Impactful Results</string>
+    <string name="title_slide3">Where Strategy Takes the Spotlight</string>
+    <string name="_450_person">₹ 450 / </string>
+    <string name="rating_feedback"><![CDATA[Rating & Feedback]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ratings_reviews"><![CDATA[Ratings & Reviews]]></string>
+</resources>

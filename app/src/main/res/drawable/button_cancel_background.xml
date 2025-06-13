@@ -1,0 +1,20 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cancelled state -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Active state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FAFFED" />
+            <stroke
+                android:width="2dp"
+                android:color="#A3D977" />
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>

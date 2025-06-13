@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FAFFED">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homepage_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintTop_toTopOf="@id/backgroundImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start"
+            android:contentDescription="Back"
+            android:src="@drawable/back_icon_black" />
+
+
+        <!-- Heading -->
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your Event"
+            android:textFontWeight="500"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333A02"
+            android:fontFamily="@font/inter_bold" />
+
+        <!-- Spacer to balance layout -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/inboxScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:background="#FAFFED"
+        app:layout_constraintTop_toBottomOf="@id/backgroundImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top|center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plan Big, Go Live, Make It Unforgettable"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Full Name -->
+            <TextView
+                android:id="@+id/fullNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Event Name"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:textSize="14sp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/et_event_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter your event name"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="2dp"
+
+                    android:src="@drawable/org_event_name_ic" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Event Description"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:textSize="14sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/descriptionEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="93dp"
+                    android:hint="Description of your event"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:gravity="top|start"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|top"
+                    android:layout_marginStart="12dp"
+                    android:padding="2dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/event_desc" />
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:textSize="14sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="YYYY-MM-DD"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="2dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/calender_org" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/tv_time_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="00:00 AM"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/clock" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/emailEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="City"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/city_ic" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Venue"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/roleEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Venue Location"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/address1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/location_ic_green" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ticket Price"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/ticketPriceEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/tags" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Type"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <EditText
+                    android:id="@+id/typeEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="offline or online"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:inputType="none"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/placard" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Artist Name"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/artistNameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="20dp"
+                    android:padding="12dp"
+                    android:hint="Enter the name"
+                    android:textColor="#333A02"
+                    android:textSize="14sp"
+/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/user" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Artist Role"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/artistRoleEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter the role"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/job_offer" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Number of Seats"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/createdAtEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/seats" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="#45463F"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/categoryEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_background2"
+                    android:paddingStart="40dp"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/menu" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addImage"
+                android:layout_width="184dp"
+                android:layout_height="38dp"
+                android:background="@drawable/border_background"
+                android:fontFamily="@font/inter_bold"
+                android:text="Add Image"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:textColor="#333A02"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="8dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/createEvent"
+                android:layout_width="184dp"
+                android:layout_height="38dp"
+                android:background="@drawable/edit_button"
+                android:fontFamily="@font/inter_bold"
+                android:text="Create Event"
+                android:textAllCaps="false"
+                android:textColor="#333A02"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="50dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

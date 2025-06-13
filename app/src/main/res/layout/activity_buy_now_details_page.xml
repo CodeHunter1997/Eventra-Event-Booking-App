@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFED">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homepage_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toTopOf="@id/backgroundImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Back"
+            android:src="@drawable/back_icon_black" />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/inboxScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:background="#FAFFED"
+        app:layout_constraintTop_toBottomOf="@id/backgroundImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Circular Image -->
+            <ImageView
+                android:id="@+id/eventImg"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_image"
+                android:background="@drawable/circle_background"
+                android:clipToOutline="true" />
+
+            <!-- Details -->
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Jui Sharma"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="500"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/role"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Eco Park"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="500"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Kolkata"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="500"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/fulltime"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="6:00 PM"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="500"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp" />
+            <!-- Ticket Counter -->
+            <LinearLayout
+
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background"
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <!-- Label -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Number of Ticket"
+                    android:textColor="#333A02"
+                    android:textSize="15sp"
+                    android:textFontWeight="500"
+                    android:fontFamily="@font/inter_500" />
+
+                <!-- Minus Button -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_decrease"
+                    android:layout_width="38dp"
+                    android:layout_height="39dp"
+                    android:text="−"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:background="@drawable/bg_counter_left"
+                    android:textColor="#333A02"
+                    android:fontFamily="@font/inter_500" />
+
+
+                <!-- Count Text -->
+                <TextView
+                    android:id="@+id/ticket_count"
+                    android:layout_width="38dp"
+                    android:layout_height="39dp"
+                    android:background="@drawable/bg_counter_middle"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#333A02"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/inter_500" />
+
+                <!-- Plus Button -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_increase"
+                    android:layout_width="38dp"
+                    android:layout_height="39dp"
+                    android:text="+"
+                    android:textSize="25sp"
+                    android:background="@drawable/bg_counter_button"
+                    android:textColor="#333A02"
+                    android:fontFamily="@font/inter_500" />
+
+            </LinearLayout>
+
+            <!-- Seating Position Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F1F6E6"
+                android:background="@drawable/edittext_background"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/edittext_background"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seating Position :"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/inter_500"
+                        android:textColor="#333A02" />
+
+                    <RadioGroup
+                        android:id="@+id/seatingRadioGroup"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="8dp">
+
+                        <RadioButton
+                            android:id="@+id/frontStage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Front stage"
+                            android:textSize="13sp"
+                            android:buttonTint="#F2A500"
+                            android:minHeight="2dp"
+                            android:minWidth="2dp"
+                            android:padding="2dp" />
+
+                        <RadioButton
+                            android:id="@+id/middleStage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Middle stage"
+                            android:textSize="13sp"
+                            android:buttonTint="#F2A500"
+                            android:minHeight="2dp"
+                            android:minWidth="2dp"
+                            android:padding="2dp" />
+
+                        <RadioButton
+                            android:id="@+id/balconyStage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Balcony stage"
+                            android:textSize="13sp"
+                            android:buttonTint="#F2A500"
+                            android:minHeight="2dp"
+                            android:minWidth="2dp"
+                            android:padding="2dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:id="@+id/paymentBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:elevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/labelTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total:"
+                        android:textColor="#465003"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/inter_500" />
+
+                    <TextView
+                        android:id="@+id/totalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ₹450"
+                        android:textColor="#465003"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/inter_bold"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/payNowBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/confirmed_button"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Pay Now"
+                    android:textAllCaps="false"
+                    android:textColor="#333A02"
+                    android:textSize="16sp"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Book Now"
+        android:textColor="#333A02"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

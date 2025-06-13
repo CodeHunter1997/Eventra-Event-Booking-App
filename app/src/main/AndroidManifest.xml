@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EventApp"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerAccountDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerDeleteAccount"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerUpdateEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.CreateEventPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerUpcomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.OrganizerDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.CategoryEventListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.HomePage.LogoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.HomePage.DeleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.TicketBookedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.UpcomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.MainFiles.ConcertDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.InboxSection"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.ProfileDetails"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.HomePage.BuyNowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".User.MainFiles.HomePage.BookNowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.MainFiles.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerNewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".User.Authentication.UserNewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".User.Authentication.UserForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerSignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerVerifyOTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.Authentication.UserSignUp"
+            android:exported="false" />
+        <activity
+            android:name=".User.Authentication.VerifyOTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.Authentication.UserSignupEmailID"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerSignUpEmailID"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerHomePage"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".User.MainFiles.HomePage.UserHomePage"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ExtraFiles.UserTypeRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".User.Authentication.UserLogin"
+            android:exported="false" />
+        <activity
+            android:name=".Organizer.Authentication.OrganizerLogin"
+            android:exported="false" />
+        <activity
+            android:name=".ExtraFiles.UserTypeLogin"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".GarbageFiles.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExtraFiles.SplashActivity"
+            android:theme="@style/Theme.MyApp.Splash"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".OnboardingScreen.OnboardingScreen"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

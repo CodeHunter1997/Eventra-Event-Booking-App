@@ -1,0 +1,33 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filterChip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <!-- Background TextView with rounded corners -->
+    <TextView
+        android:id="@+id/filterText"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="36dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Filter"
+        android:textSize="14sp"
+        android:textColor="#333A02"
+        android:fontFamily="@font/inter_500"
+        android:background="@drawable/bg_filter_chip"
+        android:gravity="center_vertical" />
+
+    <!-- Filter Icon positioned inside the TextView -->
+    <ImageView
+        android:id="@+id/filterIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_filter_list"
+        android:contentDescription="Filter Icon" />
+</FrameLayout>

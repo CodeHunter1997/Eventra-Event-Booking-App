@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Checked State -->
+    <item android:state_checked="true">
+        <drawable>
+            <layer-list>
+                <!-- Outer Circle -->
+                <item>
+                    <shape android:shape="oval">
+                        <size android:width="16dp" android:height="16dp"/>
+                        <solid android:color="#F2A500"/> <!-- Orange circle border -->
+                    </shape>
+                </item>
+                <!-- Inner Dot -->
+                <item android:top="4dp" android:right="4dp" android:bottom="4dp" android:left="4dp">
+                    <shape android:shape="oval">
+                        <solid android:color="#FFFFFF"/>
+                    </shape>
+                </item>
+            </layer-list>
+        </drawable>
+    </item>
+
+    <!-- Default Unchecked State -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="16dp" android:height="16dp"/>
+            <solid android:color="#CCCCCC"/> <!-- Light gray default -->
+        </shape>
+    </item>
+</selector>

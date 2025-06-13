@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.EventApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.EventApp" parent="Base.Theme.EventApp" />
+
+    <style name="Theme.MyApp.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_welcome</item> <!-- Your welcome icon -->
+
+        <item name="windowSplashScreenBackground">#D0E7A8</item>
+        <item name="postSplashScreenTheme">@style/Theme.EventApp</item>
+    </style>
+
+
+    <!-- Optional: rounded style for your views -->
+    <style name="RoundedImageViewStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Circle -->
+    </style>
+
+
+    <style name="TopLeftRoundedImage" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">50dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+</resources>

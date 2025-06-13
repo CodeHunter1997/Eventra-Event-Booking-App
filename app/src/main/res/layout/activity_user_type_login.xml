@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2FCE4">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:layout_marginTop="-35dp"
+            android:src="@drawable/vector_1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Logo and App Name -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="204dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:contentDescription="Logo"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_name" />
+
+
+            <TextView
+                android:id="@+id/taglineTextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Crafting Moments. Elevating Events"
+                android:textSize="17sp"
+                android:textFontWeight="500"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="-15dp"
+                android:textColor="#5D6903" />
+
+            <!-- Login Heading -->
+
+
+
+            <ImageView
+                android:id="@+id/female"
+                android:layout_width="110dp"
+                android:layout_height="115dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/female"
+                android:text="Login"
+                android:textColor="#333333"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login as"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp" />
+
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="320dp"-->
+            <!--                android:layout_height="70dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:layout_gravity="center">-->
+
+            <!--                <com.google.android.material.button.MaterialButton-->
+            <!--                    android:id="@+id/admin"-->
+            <!--                    android:layout_width="320dp"-->
+            <!--                    android:layout_height="70dp"-->
+            <!--                    android:text="Admin"-->
+            <!--                    android:textSize="19sp"-->
+            <!--                    android:textFontWeight="600"-->
+            <!--                    android:textAllCaps="false"-->
+            <!--                    android:textColor="#333A02"-->
+            <!--                    android:fontFamily="@font/inter_bold"-->
+            <!--                    app:backgroundTint="#E2F178"-->
+            <!--                    app:cornerRadius="12dp"-->
+            <!--                    android:gravity="center" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/adminIcon"-->
+            <!--                    android:layout_width="25dp"-->
+            <!--                    android:layout_height="25dp"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_marginStart="-80dp"-->
+            <!--                    android:src="@drawable/admin_icon"-->
+            <!--                    android:contentDescription="Admin Icon" />-->
+            <!--            </FrameLayout>-->
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/organizer"
+                    android:layout_width="320dp"
+                    android:layout_height="70dp"
+                    android:text="Organizer"
+                    android:textSize="19sp"
+                    android:textFontWeight="600"
+                    android:textAllCaps="false"
+                    android:textColor="#333A02"
+                    android:fontFamily="@font/inter_bold"
+                    app:backgroundTint="#E2F178"
+                    app:cornerRadius="12dp"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/organizerIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="-80dp"
+                    android:contentDescription="Organizer Icon"
+                    android:src="@drawable/organizer_icon" />
+            </FrameLayout>
+
+            <!-- Signup Text -->
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <!-- Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/attendee"
+                    android:layout_width="320dp"
+                    android:layout_height="70dp"
+                    android:text="Attendee"
+                    android:textSize="19sp"
+                    android:textFontWeight="600"
+                    android:textAllCaps="false"
+                    android:textColor="#333A02"
+                    android:fontFamily="@font/inter_bold"
+                    app:backgroundTint="#BEE047"
+                    app:cornerRadius="12dp"
+                    android:gravity="center" />
+
+                <!-- Image over the button, inside its bounds -->
+                <ImageView
+                    android:id="@+id/attendeeIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="-80dp"
+                    android:src="@drawable/attendee_icon"
+                    android:contentDescription="Attendee Icon" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="170dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/signupTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don’t have an account?"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    android:layout_marginTop="16dp" />
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup"
+                    android:layout_marginStart="5dp"
+                    android:textSize="15sp"
+                    android:textColor="#7A8C00"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>

@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:cardCornerRadius="10dp"
+            android:padding="15dp"
+            android:layout_margin="5dp"
+
+            android:background="@drawable/card_image">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Background Image -->
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/card_image"
+                    android:scaleType="fitXY" />
+
+                <!-- Bottom Info Section -->
+                <RelativeLayout
+                    android:id="@+id/RCV_Bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#C2000000"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/eventType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Workshop"
+                        android:fontFamily="@font/inter_500"
+                        android:textFontWeight="500"
+                        android:textSize="11sp"
+                        android:layout_marginEnd="50dp"
+
+                        android:layout_marginLeft="3dp"
+                        android:textColor="#FAFFDA" />
+
+                    <TextView
+                        android:id="@+id/tv_date_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eventType"
+                        android:text="20.07.2025"
+                        android:fontFamily="@font/inter_500"
+                        android:textFontWeight="500"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="#FAFFDA" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_date_label"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/ticketPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹300"
+                            android:fontFamily="@font/inter_500"
+                            android:textFontWeight="500"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#DDFF00"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/perPerson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/Person"
+                            android:fontFamily="@font/inter_500"
+                            android:textFontWeight="500"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="2dp"
+                            android:textColor="#DDFF00"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_date_label"
+                        android:layout_marginTop="-32dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/inter_500"
+                        android:gravity="right"
+                        android:text="Location"
+                        android:textColor="#FAFFDA"
+                        android:textFontWeight="500"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

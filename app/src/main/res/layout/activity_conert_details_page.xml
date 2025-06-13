@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FAFFED"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        tools:context=".Activities.Attendee.Concertdetails">
+
+
+        <ImageView
+            android:id="@+id/bgImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_details_page"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-350dp"
+            android:layout_marginTop="55dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/top_rounded_background"
+            android:paddingTop="16dp"
+            android:clipToPadding="true"
+            app:layout_constraintTop_toBottomOf="@+id/bgImage">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/backgroundLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Musical Concert"
+                    android:fontFamily="@font/inter_500"
+                    android:textColor="#666666"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_event_name_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_500"
+                    android:text=" Singh Live Concert"
+                    android:textFontWeight="600"
+                    android:textSize="26dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/priceSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_event_name_label"
+                    android:paddingEnd="16dp">
+
+                    <!-- Price -->
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_500"
+                        android:text="₹ 450 /"
+                        android:textColor="#000000"
+                        android:textFontWeight="500"
+                        android:textSize="17sp" />
+
+                    <!-- Per Person -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_500"
+                        android:text=" Person"
+                        android:textColor="#666666"
+                        android:textFontWeight="500"
+                        android:textSize="17sp" />
+
+                    <!-- Spacer to push right-side text to the end -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="2" />
+
+<TextView
+    android:id="@+id/status"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Live"
+    android:background="@drawable/org_live_status_bg"
+    android:padding="5dp"
+    android:fontFamily="@font/inter_500"
+    />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/priceSection" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="start"-->
+                <!--                    android:text="Artist Name"-->
+                <!--                    android:fontFamily="@font/inter_500"-->
+                <!--                    android:textColor="#666666"-->
+                <!--                    android:textSize="16dp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintHorizontal_bias="0.071"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/line" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/artistname"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="30dp"-->
+                <!--                    android:layout_marginStart="25dp"-->
+                <!--                    android:fontFamily="@font/inter_bold"-->
+                <!--                    android:text="Jack The Reaper"-->
+                <!--                    android:textFontWeight="700"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/line"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/artistrole"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="12dp"-->
+                <!--                    android:fontFamily="@font/inter_bold"-->
+                <!--                    android:text="SINGER"-->
+                <!--                    android:textFontWeight="700"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    app:layout_constraintStart_toEndOf="@+id/artistname"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/artistname" />-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dateSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line">
+
+                    <ImageView
+                        android:id="@+id/calender"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/calender"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/date2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunday, 25th April 2025,"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/calender"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/date3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:00 PM"
+                        android:layout_marginStart="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/date2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/dateSection">
+
+                    <!-- Right side: Direction Text -->
+                    <TextView
+                        android:id="@+id/directionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:fontFamily="@font/inter_500"
+                        android:text="Direction"
+                        android:textColor="#333A02"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Left side container (Image + Venue Text + City) -->
+                    <ImageView
+                        android:id="@+id/createdAtEdt"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="25dp"
+                        android:src="@drawable/location_green"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Eco Park"
+                        app:layout_constraintBottom_toBottomOf="@id/createdAtEdt"
+                        app:layout_constraintStart_toEndOf="@id/createdAtEdt"
+                        app:layout_constraintTop_toTopOf="@id/createdAtEdt" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/city"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="4dp"-->
+<!--                        android:text=", Mumbai"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/venue"-->
+<!--                        app:layout_constraintStart_toEndOf="@id/venue"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/venue" />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <FrameLayout
+                    android:id="@+id/mapView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border_background"
+                    android:elevation="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/map" />
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/eventdetailsHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-280dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Event Details"
+                    android:textFontWeight="700"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="Our programs are designed to support every step of your health journey. Whether you're managing a condition, aiming for a fitness goal, or simply trying to eat better, we've got you covered. We combine expert guidance, personalized plans, and real-life support to help you stay motivated and make lasting changes."
+                    android:textColor="#6E6E6E"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eventdetailsHeading" />
+
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/editBtn"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:text="Edit"
+                        android:fontFamily="@font/inter_500"
+                        android:textSize="16sp"
+                        android:textFontWeight="700"
+                        android:textColor="#333A02"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:background="@drawable/edit_btn"
+                        android:elevation="4dp"
+                        android:layout_marginEnd="16dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:text="Delete"
+                        android:fontFamily="@font/inter_500"
+                        android:textSize="16sp"
+                        android:textFontWeight="700"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:background="@drawable/delete_btn"
+                        android:elevation="4dp" />
+
+                </LinearLayout>
+
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/buttonLayout"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="16dp"-->
+                <!--                    android:layout_marginBottom="32dp"-->
+                <!--                    android:paddingStart="25dp"-->
+                <!--                    android:paddingEnd="25dp"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:gravity="center"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/eventdetails"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent">-->
+
+                <!--                    <androidx.appcompat.widget.AppCompatButton-->
+                <!--                        android:id="@+id/signupBtn"-->
+                <!--                        android:layout_width="90dp"-->
+                <!--                        android:layout_height="35dp"-->
+                <!--                        android:text="Edit"-->
+                <!--                        android:fontFamily="@font/inter_500"-->
+                <!--                        android:textSize="16sp"-->
+                <!--                        android:textFontWeight="700"-->
+                <!--                        android:textColor="#333A02"-->
+                <!--                        android:textStyle="normal"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:textAllCaps="false"-->
+                <!--                        android:background="@drawable/edit_btn"-->
+                <!--                        android:elevation="4dp"-->
+                <!--                        android:layout_marginEnd="16dp" />-->
+
+                <!--                    <View-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="0dp"-->
+                <!--                        android:layout_weight="1" />-->
+                <!--                    <androidx.appcompat.widget.AppCompatButton-->
+                <!--                        android:id="@+id/deleteBtn"-->
+                <!--                        android:layout_width="90dp"-->
+                <!--                        android:layout_height="35dp"-->
+                <!--                        android:text="Delete"-->
+                <!--                        android:fontFamily="@font/inter_500"-->
+                <!--                        android:textSize="16sp"-->
+                <!--                        android:textFontWeight="700"-->
+                <!--                        android:textColor="#FFFFFF"-->
+                <!--                        android:textStyle="normal"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:textAllCaps="false"-->
+                <!--                        android:background="@drawable/delete_btn"-->
+                <!--                        android:elevation="4dp" />-->
+
+                <!--                </LinearLayout>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/date_backgound_color"
+            android:layout_marginTop="200dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:id="@+id/tv_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="top|center_horizontal"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:text="sunday, 25 April 2025"
+                android:textColor="#333A02"
+                android:textFontWeight="600"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=",  "
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:textColor="#333A02"
+                android:textFontWeight="600"
+                android:textSize="13dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="6.00 PM"
+                android:layout_gravity="top|center_horizontal"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:textFontWeight="600"
+                android:textColor="#333A02"
+                android:textSize="12dp"
+                android:layout_marginTop="0dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

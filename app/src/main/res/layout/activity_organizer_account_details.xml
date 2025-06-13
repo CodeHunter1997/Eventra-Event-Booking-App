@@ -1,0 +1,290 @@
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFFED">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <!-- Background Image -->
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/homepage_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Back Arrow -->
+
+
+            <!-- Inner Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="16dp"
+                    android:contentDescription="Back"
+                    android:src="@drawable/back_icon_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!-- Profile Image -->
+                <TextView
+                    android:id="@+id/tv_update_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:text="Account Details"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="20dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/RoundedImageViewStyle" />
+
+                <!-- Change Picture Text -->
+                <!--            <TextView-->
+                <!--                android:id="@+id/changePicture"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="8dp"-->
+                <!--                android:text="Change profile picture"-->
+                <!--                android:textColor="#8BA007"-->
+                <!--                android:textSize="14sp"-->
+                <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/profileImage" />-->
+
+                <!-- Full Name -->
+                <TextView
+                    android:id="@+id/tv_event_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Account ID"
+                    android:textColor="#45463F"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_update_event_title" />
+
+                <TextView
+                    android:id="@+id/et_event_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background2"
+                     android:padding="12dp"
+                     android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textColor="#333A02"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_event_name_label" />
+
+                <!-- Email -->
+                <TextView
+                    android:id="@+id/tv_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Company Name"
+                    android:textColor="#45463F"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_event_name" />
+
+                <TextView
+                    android:id="@+id/et_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background2"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_date_label" />
+
+
+                <!-- Phone -->
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Ph.no."
+                    android:textColor="#45463F"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_date" />
+
+                <TextView
+                    android:id="@+id/tv_time_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background2"
+                    android:padding="12dp"
+                    android:textColor="#333A02"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phoneNumber" />
+
+                <!-- DOB -->
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Email ID"
+                    android:textColor="#45463F"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_time_label" />
+
+                <TextView
+                    android:id="@+id/emailEdt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background2"
+                     android:padding="12dp"
+                     android:textColor="#333A02"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email" />
+
+                <!-- Bio -->
+                <TextView
+                    android:id="@+id/role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Your Role"
+                    android:textColor="#45463F"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailEdt" />
+
+                <TextView
+                    android:id="@+id/roleEdt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background2"
+                    android:padding="12dp"
+                     android:textColor="#333A02"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/role" />
+
+                <!-- Location -->
+                <TextView
+                    android:id="@+id/createdAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Account Created"
+                    android:textColor="#45463F"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/roleEdt" />
+
+                <TextView
+                    android:id="@+id/createdAtEdt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background2"
+                    android:padding="12dp"
+                     android:textColor="#333A02"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/createdAt" />
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/createdAtEdt">
+
+                    <!--                <androidx.appcompat.widget.AppCompatButton-->
+                    <!--                    android:id="@+id/updateButton"-->
+                    <!--                    android:layout_width="160dp"-->
+                    <!--                    android:layout_height="38dp"-->
+                    <!--                    android:layout_marginEnd="18dp"-->
+                    <!--                    android:background="@drawable/button_update_background"-->
+                    <!--                    android:fontFamily="@font/inter_500"-->
+                    <!--                    android:text="Update"-->
+                    <!--                    android:textAllCaps="false"-->
+                    <!--                    android:textColor="#333A02"-->
+                    <!--                    android:textFontWeight="600"-->
+                    <!--                    android:textSize="16sp"-->
+                    <!--                    android:textStyle="bold" />-->
+
+
+                    <!--                <androidx.appcompat.widget.AppCompatButton-->
+                    <!--                    android:id="@+id/editButton"-->
+                    <!--                    android:layout_width="160dp"-->
+                    <!--                    android:layout_height="38dp"-->
+                    <!--                    android:background="@drawable/edit_button"-->
+                    <!--                    android:fontFamily="@font/inter_500"-->
+                    <!--                    android:text="Edit"-->
+                    <!--                    android:textAllCaps="false"-->
+                    <!--                    android:textColor="#333A02"-->
+                    <!--                    android:textFontWeight="600"-->
+                    <!--                    android:textSize="16sp"-->
+                    <!--                    android:textStyle="bold" />-->
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

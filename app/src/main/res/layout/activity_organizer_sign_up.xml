@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFED">
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:layout_marginTop="-35dp"
+            android:src="@drawable/vector_1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Logo and App Name -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/app_logo"
+                android:contentDescription="Logo" />
+
+            <TextView
+                android:id="@+id/taglineTextView"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Crafting Moments. Elevating Events"
+                android:textSize="16sp"
+                android:textFontWeight="500"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/inter_500"
+                android:inputType="textCapWords"
+                android:layout_marginTop="-10dp"
+                android:textColor="#5D6903" />
+
+            <!-- Signup Heading -->
+            <TextView
+                android:id="@+id/loginTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signup"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:textFontWeight="700"
+                android:textColor="#333A02"
+                android:inputType="textCapWords"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp" />
+
+            <TextView
+                android:id="@+id/welcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Organizer ! Let’s create account."
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_500"
+                android:layout_gravity="center"
+                android:textColor="#333A02"
+                android:layout_marginTop="15dp" />
+
+            <!-- Email EditText -->
+
+            <EditText
+                android:id="@+id/et_date"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:hint="Company Name"
+                android:textColorHint="#333A02"
+
+                android:fontFamily="@font/inter_500"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:drawableStart="@drawable/org_ic_signup"
+                android:drawablePadding= "10dp"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="20dp"
+                android:layout_marginTop="25dp" />
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/dob"-->
+            <!--                android:layout_width="320dp"-->
+            <!--                android:layout_height="70dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:hint="YYYY-MM-DD"-->
+            <!--                android:fontFamily="@font/inter_500"-->
+            <!--                android:textSize="17dp"-->
+            <!--                android:textColorHint="#333A02"-->
+
+            <!--                android:textColor="@color/black"-->
+            <!--                android:drawableStart="@drawable/calendar1"-->
+            <!--                android:drawablePadding= "10dp"-->
+            <!--                android:background="@drawable/edittext_background"-->
+            <!--                android:paddingStart="20dp"-->
+            <!--                android:layout_marginTop="25dp" />-->
+
+            <!-- Gender (Dropdown) -->
+
+            <EditText
+                android:id="@+id/emailID"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:hint="Email ID"
+                android:fontFamily="@font/inter_500"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textColorHint="#333A02"
+
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding= "10dp"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="20dp"
+                android:layout_marginTop="25dp" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:hint="Phone Number"
+                android:fontFamily="@font/inter_500"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textColorHint="#333A02"
+
+                android:drawableStart="@drawable/call_icon"
+                android:drawablePadding= "10dp"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="20dp"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_marginTop="25dp" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:hint="Enter Your Password"
+                android:fontFamily="@font/inter_500"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textColorHint="#333A02"
+
+                android:drawableStart="@drawable/lock_icon"
+                android:drawableEnd="@drawable/eye"
+                android:paddingEnd="15dp"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding= "10dp"
+                android:paddingStart="20dp"
+                android:layout_marginTop="25dp"
+                android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:hint="Confirm Password"
+                android:fontFamily="@font/inter_500"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textColorHint="#333A02"
+
+                android:drawableStart="@drawable/lock_icon"
+                android:drawableEnd="@drawable/eye"
+                android:paddingEnd="15dp"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding= "10dp"
+                android:paddingStart="20dp"
+                android:layout_marginTop="25dp"
+                android:inputType="textPassword" />
+
+            <!-- Sign Up Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signupBtn"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:text="Signup"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="22sp"
+                android:textFontWeight="700"
+                android:textColor="#333A02"
+                android:textStyle="normal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:background="@drawable/login_button_background"
+                android:elevation="4dp" />
+
+            <!-- OR Text -->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Or"-->
+<!--                android:fontFamily="@font/inter_500"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#333A02"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="10dp" />-->
+
+
+            <!-- Google Login Button -->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/signUpWithGoogle"-->
+<!--                android:layout_width="320dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:text="Signup with"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="14dp"-->
+<!--                android:textFontWeight="500"-->
+<!--                android:paddingStart="105dp"-->
+<!--                android:fontFamily="@font/inter_500"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:drawableEnd="@drawable/google_icon"-->
+<!--                android:paddingEnd="110dp"-->
+<!--                android:background="@drawable/edittext_background"-->
+<!--                android:textColor="#333A02"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:layout_marginTop="8dp" />-->
+            <!-- Signup Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signupTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Already have an account?"
+                    android:fontFamily="@font/inter_500"
+                    android:textColor="#333A02"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/loginTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:layout_marginStart="5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_bold"
+                    android:textColor="#7A8C00"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>

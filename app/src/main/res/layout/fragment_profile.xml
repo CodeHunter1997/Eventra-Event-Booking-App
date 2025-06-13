@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFED">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/homepage_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- Top Icons -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp">
+
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="22dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:src="@drawable/bell_icon"/>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="22dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:src="@drawable/favourite_icon"/>-->
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Profile Section Top: Image, Edit Profile, Share -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileHeaderSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="-40dp"
+            app:layout_constraintTop_toBottomOf="@id/backgroundImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Profile Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/tv_update_event_title"
+                android:layout_width="132dp"
+                android:layout_height="132dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_image"
+                app:shapeAppearanceOverlay="@style/RoundedImageViewStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Edit and Share Buttons -->
+            <LinearLayout
+                android:id="@+id/editShareLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/profileDetails"
+                    android:layout_width="140dp"
+                    android:layout_height="35dp"
+                    android:text=" Profile Details"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="#333A02"
+                    android:background="@drawable/rounded_border_textview2"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="27dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/share_profile"
+                    android:padding="6dp"
+                    android:background="@drawable/rounded_border_textview2" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Profile Section Bottom: Name and Location -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileInfoSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@id/profileHeaderSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/tv_date_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, "
+                    android:fontFamily="@font/inter_500"
+                    android:textColor="#5D6903"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/firstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jui"
+                    android:fontFamily="@font/inter_500"
+                    android:textColor="#5D6903"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:fontFamily="@font/inter_500"
+                    android:textColor="#5D6903"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/lastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sharma"
+                    android:fontFamily="@font/inter_500"
+                    android:textColor="#5D6903"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/locationRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tv_date_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_label"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/locationIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/location_icon"
+                    android:contentDescription="Location icon"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/createdAtEdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:clickable="true"
+
+                    android:textSize="18sp"
+                    android:textColor="#4F5A00" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Content Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintTop_toBottomOf="@id/profileInfoSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Account Header -->
+            <TextView
+                android:id="@+id/accountHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:fontFamily="@font/inter_500"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#4F5A00"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Booking History Row -->
+            <LinearLayout
+                android:id="@+id/bookingHistoryRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/accountHeader">
+
+                <ImageView
+                    android:id="@+id/booking_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/booking_history_ic"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/bookingHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:text="Booking History"
+                    android:clickable="true"
+
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+            <!-- Inbox Row -->
+            <LinearLayout
+                android:id="@+id/inboxRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/bookingHistoryRow">
+
+                <ImageView
+                    android:id="@+id/inbox_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:padding="1dp"
+                    android:src="@drawable/email_green_icon" />
+
+                <TextView
+                    android:id="@+id/inbox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Inbox"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:clickable="true"
+
+                    android:textSize="16sp"
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+            <!-- Notification Row -->
+            <LinearLayout
+                android:id="@+id/notificationRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/inboxRow">
+
+                <ImageView
+                    android:id="@+id/notification_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="3dp"
+                    android:src="@drawable/bell_icon"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/notification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notification"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:clickable="true"
+
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/contactUsRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/notificationRow">
+
+                <ImageView
+                    android:id="@+id/contactUs_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="3dp"
+                    android:src="@drawable/contact_us"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/contactUs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Contact Us"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:clickable="true"
+
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+
+            <!-- About Row -->
+            <LinearLayout
+                android:id="@+id/aboutRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/contactUsRow">
+
+                <TextView
+                    android:id="@+id/aboutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account "
+                    android:fontFamily="@font/inter_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4F5A00"
+                    app:layout_constraintTop_toTopOf="parent" />            </LinearLayout>
+
+            <!-- Account Settings Row -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/profileRow"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/aboutRow">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:padding="2dp"-->
+<!--                    android:src="@drawable/green_profile_ic"-->
+<!--                    android:layout_marginEnd="12dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Profile"-->
+<!--                    android:fontFamily="@font/inter_500"-->
+<!--                    android:textFontWeight="400"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textColor="#4F5A00"/>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="18dp"-->
+<!--                    android:layout_height="18dp"-->
+<!--                    android:src="@drawable/right_arrow_icon"/>-->
+<!--            </LinearLayout>-->
+
+            <!-- Feedback Row -->
+            <LinearLayout
+                android:id="@+id/feedbackRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/aboutRow">
+
+                <ImageView
+                    android:id="@+id/feedback_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+
+                    android:src="@drawable/feedback"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/feedback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+
+                    android:text="Feedback"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changePasswordRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/feedbackRow">
+
+                <ImageView
+                    android:id="@+id/changePassword_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+
+                    android:src="@drawable/key"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/changePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="Change Password"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deleteAccountRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/changePasswordRow">
+
+                <ImageView
+                    android:id="@+id/delete_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="3dp"
+                    android:src="@drawable/delete_ic"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/deleteAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete Account"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logoutRow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/deleteAccountRow">
+
+                <ImageView
+                    android:id="@+id/logout_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="3dp"
+                    android:src="@drawable/logout"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Logout"
+                    android:fontFamily="@font/inter_500"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:textColor="#4F5A00"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/right_arrow_icon"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

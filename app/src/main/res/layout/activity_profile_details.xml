@@ -1,0 +1,300 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFED">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/homepage_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Back Arrow -->
+
+
+        <!-- Inner Layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="16dp"
+                android:contentDescription="Back"
+                android:src="@drawable/back_icon_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!-- Profile Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/tv_update_event_title"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_image"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/RoundedImageViewStyle" />
+
+            <!-- Change Picture Text -->
+<!--            <TextView-->
+<!--                android:id="@+id/changePicture"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="Change profile picture"-->
+<!--                android:textColor="#8BA007"-->
+<!--                android:textSize="14sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/profileImage" />-->
+
+            <!-- Full Name -->
+            <TextView
+                android:id="@+id/tv_event_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Full Name"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_update_event_title" />
+
+            <TextView
+                android:id="@+id/tv_full_name_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="Full Name"
+                android:padding="12dp"
+                android:text=""
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_name_label" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tv_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Email ID"
+                android:textColor="#45463F"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_full_name_value" />
+
+            <TextView
+                android:id="@+id/tv_email_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="Email ID"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_label" />
+
+
+            <!-- Phone -->
+            <TextView
+                android:id="@+id/tv_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ph.no."
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_value" />
+
+            <TextView
+                android:id="@+id/tv_phone_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="Ph.no."
+                android:inputType="phone"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone_label" />
+
+            <!-- DOB -->
+            <TextView
+                android:id="@+id/tv_dob_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Date of Birth"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone_value" />
+
+            <TextView
+                android:id="@+id/tv_dob_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="Date of Birth"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_dob_label" />
+
+            <!-- Bio -->
+            <TextView
+                android:id="@+id/tv_account_id_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Account ID"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_dob_value" />
+
+            <TextView
+                android:id="@+id/tv_account_id_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_account_id_label" />
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/tv_gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gender"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_account_id_value" />
+
+            <TextView
+                android:id="@+id/tv_gender_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_gender_label" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_gender_value">
+
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/updateButton"-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="38dp"-->
+<!--                    android:layout_marginEnd="18dp"-->
+<!--                    android:background="@drawable/button_update_background"-->
+<!--                    android:fontFamily="@font/inter_500"-->
+<!--                    android:text="Update"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="#333A02"-->
+<!--                    android:textFontWeight="600"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/editButton"-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="38dp"-->
+<!--                    android:background="@drawable/edit_button"-->
+<!--                    android:fontFamily="@font/inter_500"-->
+<!--                    android:text="Edit"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="#333A02"-->
+<!--                    android:textFontWeight="600"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

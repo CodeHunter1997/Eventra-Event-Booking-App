@@ -1,0 +1,482 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FAFFED">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:padding="0dp">
+
+        <ImageView
+            android:id="@+id/iv_header_background"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/homepage_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="25dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="16dp"
+                android:contentDescription="Back"
+                android:src="@drawable/back_icon_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_update_event_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Update your Event"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_event_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Event Name"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_update_event_title" />
+
+            <EditText
+                android:id="@+id/et_event_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="Name"
+                android:padding="12dp"
+                android:fontFamily="@font/inter_500"
+                android:inputType="text"
+                android:textFontWeight="400"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_name_label" />
+
+            <TextView
+                android:id="@+id/tv_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Date"
+                android:textColor="#45463F"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_name" />
+
+            <EditText
+                android:id="@+id/et_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="YYYY-MM-DD"
+                android:padding="12dp"
+                android:inputType="text"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_label" />
+
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Time"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_date" />
+
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="00:00 AM"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_time_label" />
+
+            <TextView
+                android:id="@+id/tv_city_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="City"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_time" />
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:hint="City"
+                android:padding="12dp"
+                android:textColor="#333A02"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_city_label" />
+
+            <TextView
+                android:id="@+id/tv_venue_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Venue"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_city" />
+
+            <EditText
+                android:id="@+id/et_venue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="Venue"
+                android:textColor="#333A02"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_venue_label" />
+
+            <TextView
+                android:id="@+id/tv_total_seats_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Total Seats"
+                android:inputType="number"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_venue" />
+
+            <EditText
+                android:id="@+id/et_total_seats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="00"
+                android:inputType="number"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_seats_label" />
+
+            <TextView
+                android:id="@+id/tv_ticket_price_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ticket Price"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_total_seats" />
+
+            <EditText
+                android:id="@+id/et_ticket_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="000"
+                android:inputType="number"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ticket_price_label" />
+
+            <TextView
+                android:id="@+id/tv_event_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Event Type"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_ticket_price" />
+
+            <EditText
+                android:id="@+id/et_event_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="offline or online"
+                android:inputType="none"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_type_label" />
+
+            <TextView
+                android:id="@+id/tv_artist_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Artist Name"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_type" />
+
+            <EditText
+                android:id="@+id/et_artist_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="Artist Name"
+                android:inputType="text"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_artist_name_label" />
+
+            <TextView
+                android:id="@+id/tv_artist_role_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Artist Role"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_artist_name" />
+
+            <EditText
+                android:id="@+id/et_artist_role"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="Artist Role"
+                android:inputType="text"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_artist_role_label" />
+
+            <TextView
+                android:id="@+id/tv_category_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Category"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_artist_role" />
+
+            <EditText
+                android:id="@+id/et_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint="Category"
+                android:inputType="text"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_category_label" />
+
+            <TextView
+                android:id="@+id/tv_description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Description"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_category" />
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:hint=""
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description_label" />
+
+            <LinearLayout
+                android:id="@+id/ll_attach_images_button"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/purple_rounded_bg"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_description">
+
+                <TextView
+                    android:id="@+id/tv_attach_images_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_500"
+                    android:padding="10dp"
+                    android:text="Attach Images"
+                    android:textColor="#45463F"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_attach_images_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:src="@drawable/attach_images" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_update_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:paddingBottom="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_attach_images_button">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_update_event"
+                    android:layout_width="160dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/edit_btn"
+                    android:fontFamily="@font/inter_500"
+                    android:text="Update"
+
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="#333A02"
+                    android:textFontWeight="600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

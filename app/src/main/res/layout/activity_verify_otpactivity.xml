@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2FCE4">
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:layout_marginTop="-35dp"
+            android:src="@drawable/vector_1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Logo and App Name -->
+            <!-- Logo and App Name -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_name"
+                android:contentDescription="Logo" />
+
+
+            <TextView
+                android:id="@+id/taglineTextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Crafting Moments. Elevating Events"
+                android:textSize="17sp"
+                android:textFontWeight="500"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="-10dp"
+                android:textColor="#5D6903" />
+
+            <!-- Login Heading -->
+            <TextView
+                android:id="@+id/loginTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verification code"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="42dp" />
+
+            <TextView
+                android:id="@+id/welcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verification code that send you to your desire email"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="#666666"
+                android:layout_marginTop="15dp" />
+
+            <!-- Verification EditText -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/code1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/code2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/code3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/code4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Remember Me and Forgot Password Row -->
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signupTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Didn’t received yet ? "
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/resendTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/resend_it_in_00_00"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:clickable="false" />
+
+
+
+            </LinearLayout>
+
+            <!-- Login Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextBtn"
+                android:layout_width="320dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/login_button_background"
+                android:elevation="4dp"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="#333A02"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Signup Text -->
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>

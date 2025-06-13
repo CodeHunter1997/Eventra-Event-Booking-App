@@ -1,0 +1,276 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFED">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/homepage_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Back Arrow -->
+
+
+        <!-- Inner Layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="16dp"
+                android:contentDescription="Back"
+                android:src="@drawable/back_icon_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!-- Profile Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/tv_update_event_title"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_image"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/RoundedImageViewStyle" />
+
+            <!-- Change Picture Text -->
+            <!--            <TextView-->
+            <!--                android:id="@+id/changePicture"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:text="Change profile picture"-->
+            <!--                android:textColor="#8BA007"-->
+            <!--                android:textSize="14sp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/profileImage" />-->
+
+            <!-- Full Name -->
+            <!-- Company Name Label -->
+            <TextView
+                android:id="@+id/companyNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Company Name"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_update_event_title" />
+
+            <!-- Company Name Value -->
+            <EditText
+                android:id="@+id/companyNameEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/companyNameLabel" />
+
+
+            <!-- Phone Number Label -->
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Phone Number"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/companyNameEdt" />
+
+            <!-- Phone Number Value -->
+            <EditText
+                android:id="@+id/tv_time_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:inputType="number"
+                android:padding="12dp"
+                android:maxLength="10"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneLabel" />
+
+            <!-- Email Label -->
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Email"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_time_label" />
+
+            <!-- Email Value -->
+            <EditText
+                android:id="@+id/emailEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailLabel" />
+
+            <!-- Role Label -->
+            <TextView
+                android:id="@+id/roleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Role"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailEdt" />
+
+            <!-- Role Value -->
+            <EditText
+                android:id="@+id/roleEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:focusable="false"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/roleLabel" />
+
+            <!-- Created At Label -->
+            <TextView
+                android:id="@+id/createdAtLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Created At"
+                android:textColor="#45463F"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/roleEdt" />
+
+            <!-- Created At Value -->
+            <EditText
+                android:id="@+id/createdAtEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background2"
+                android:padding="12dp"
+                android:textColor="#333A02"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_500"
+                android:textFontWeight="400"
+                android:focusable="false"
+                android:clickable="false"
+                android:cursorVisible="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/createdAtLabel" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/createdAtEdt">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/updateBtn"
+                                    android:layout_width="160dp"
+                                    android:layout_height="38dp"
+                                    android:layout_marginEnd="18dp"
+                                    android:background="@drawable/edit_btn"
+                                    android:fontFamily="@font/inter_500"
+                                    android:text="Save Changes"
+                                    android:textAllCaps="false"
+                                    android:textColor="#333A02"
+                                    android:textFontWeight="600"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                <!--                <androidx.appcompat.widget.AppCompatButton-->
+                <!--                    android:id="@+id/editButton"-->
+                <!--                    android:layout_width="160dp"-->
+                <!--                    android:layout_height="38dp"-->
+                <!--                    android:background="@drawable/edit_button"-->
+                <!--                    android:fontFamily="@font/inter_500"-->
+                <!--                    android:text="Edit"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="#333A02"-->
+                <!--                    android:textFontWeight="600"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:textStyle="bold" />-->
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
